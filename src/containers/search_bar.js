@@ -5,6 +5,9 @@ class SearchBar extends Component {
     super(props);
 
     this.state = { term: '' };
+
+    // Bind onInputChange to this, reassign to self (e.g. x = x+1)
+    this.onInputChange = this.onInputChange.bind(this);
   }
 
   onInputChange(event) {
@@ -18,7 +21,7 @@ class SearchBar extends Component {
           placeholder="Enter a city name"
           className="form-control"
           value={this.state.term}
-          onChange={this.onInputChange.bind(this)} />
+          onChange={this.onInputChange} />
         <span className="input-group-button">
           <button type="submit" className="btn btn-secondary">Submit</button>
         </span>
