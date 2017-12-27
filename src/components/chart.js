@@ -13,7 +13,7 @@ const Chart = (props) => {
       <Sparklines svgHeight={150} svgWidth={200} data={props.data}>
         <SparklinesLine color={props.color} />
         <SparklinesReferenceLine type="mean" />
-        <div>{average(props.data)}</div>
+        <div>{average(props.data)} {props.units}</div>
       </Sparklines>
     </div>
   )
