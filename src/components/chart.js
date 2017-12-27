@@ -1,11 +1,12 @@
 import React from 'react';
-import { Sparklines, SparklinesLine } from 'react-sparklines';
+import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
 
 const Chart = (props) => {
   return (
     <div>
-      <Sparklines height={120} width={180} data={props.data}>
+      <Sparklines svgHeight={200} svgWidth={200} data={props.data}>
         <SparklinesLine color={props.color} />
+        <SparklinesReferenceLine type="mean" />
       </Sparklines>
     </div>
   )
